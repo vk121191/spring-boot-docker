@@ -12,12 +12,12 @@ spec:
       labels:
         app: jhooq-springboot
     spec:
+      imagePullSecrets:
+        - name: regcred
       containers:
         - name: springboot
           image: vkaushik1211/jhooq-docker-demo:jhooq-docker-demo
-      imagePullSecrets:
-        - name: regcred
-
+      
           resources:
             requests:
               memory: "128Mi"
@@ -50,9 +50,7 @@ spec:
             failureThreshold: 30
             periodSeconds: 10
 
-          env:
-            - name: PORT
-              value: "8080"
+         
 ---
 apiVersion: v1
 kind: Service

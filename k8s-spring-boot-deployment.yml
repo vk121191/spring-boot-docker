@@ -40,15 +40,15 @@ spec:
             httpGet:
               path: /hello
               port: 8080
-            initialDelaySeconds: 15
-            periodSeconds: 10
+            initialDelaySeconds: 300
+            periodSeconds: 20
 
           startupProbe:
             httpGet:
               path: /hello
               port: 8080
-            failureThreshold: 30
-            periodSeconds: 10
+            failureThreshold: 300
+            periodSeconds: 20
 
          
 ---

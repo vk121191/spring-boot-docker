@@ -15,8 +15,8 @@ spec:
       containers:
         - name: springboot
           image: vkaushik1211/jhooq-docker-demo:jhooq-docker-demo
-          imagePullSecrets:
-           - name: regcred
+      imagePullSecrets:
+        - name: regcred
 
           resources:
             requests:
